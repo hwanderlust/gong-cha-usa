@@ -1,4 +1,5 @@
 :root {
+/* Colors */
   --red: #AB103E;
   --red-light: #D4A5B3;
   --white: #FFFFFF;
@@ -7,6 +8,23 @@
   --grey-dark: #9A9999;
   --grey: #CACACA;
   --grey-light: #DADADA;
+
+  /* Metrics */
+  --spacing-small: 0.5rem; /* 8px */
+  --spacing-regular: 1rem;
+  --spacing-medium: 1.5rem;
+  --spacing-large: 2rem;
+
+  --font-12: 12px;
+  --font-14: 14px;
+  --font-18: 18px;
+  --font-24: 24px;
+  --font-36: 36px;
+
+  --border-modal: 5px;
+  --border-input: 10px;
+  --border-button: 30px;
+  --border-circle: 50%;
 }
 
 @font-face {

@@ -20,6 +20,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <div className="App-section">
+        <p>Testing Testing Testing 123</p>
+        <p className="App-section-two">Testing Testing Testing 123</p>
+        <p className="App-section-three">Testing Testing Testing 123</p>
+      </div>
     </div>
   );
 }
