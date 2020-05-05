@@ -1,0 +1,16 @@
+.button-container {
+    border-radius: var(--border-button);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 6rem; /* 6 * 16 */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-text {
+    color: var(--white);
+    font-size: var(--font-14);
+    font-family: "Roboto-Medium";
+    padding: var(--spacing-small) var(--spacing-xl);
+}
