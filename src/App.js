@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button } from "./components/common";
+import { ButtonPair } from "./components/common";
 import logo from './logo.svg';
 
 import './styles/App.css';
@@ -15,18 +15,16 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
 
-        <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "500px" }}>
-          <Button
-            text="Learn React"
-            color="black"
-            onClick="https://reactjs.org"
-          />
-          <Button
-            text="Show Alert"
-            color="white"
-            onClick={() => { alert("Navigate to an internal route") }}
-          />
-        </div>
+        <ButtonPair
+          primaryButton={{
+            text: "Learn React",
+            onClick: "https://reactjs.org"
+          }}
+          secondaryButton={{
+            text: "Click Secondary",
+            onClick: () => { alert("Navigate to an internal route") }
+          }}
+        />
       </header>
     </div>
   );

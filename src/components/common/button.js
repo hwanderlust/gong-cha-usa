@@ -6,6 +6,9 @@ import { isInternalPath } from "../../helpers";
 import "../../styles/Button.css";
 import { Color } from "../../styles";
 
+/**
+ * Renders a standard Button varying the font color based on the button's bg color
+ */
 function Button(props) {
 
     if (typeof props.onClick == "string") {
@@ -14,13 +17,13 @@ function Button(props) {
 
     return (
         <div
-            className="button-container"
+            className="button__container"
             style={backgroundColor(props.color)}
             onClick={props.onClick}
         >
             <p
-                className="button-text"
-                style={props.color === "white" && { color: Color.black }}
+                className="button__text"
+                style={props.color === "white" ? { color: Color.black } : undefined}
             >
                 {props.text}
             </p>
@@ -38,13 +41,13 @@ function LinkButton(props) {
     if (!isInternalPath(props.onClick)) {
         return (
             <a
-                className="button-container"
+                className="button__container"
                 style={backgroundColor(props.color)}
                 href={props.onClick}
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <p className="button-text">{props.text}</p>
+                <p className="button__text">{props.text}</p>
             </a>
         );
     }
