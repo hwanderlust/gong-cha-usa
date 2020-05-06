@@ -1,5 +1,8 @@
 import React from 'react';
+
+import { Button } from "components/common";
 import logo from './logo.svg';
+
 import 'styles/App.css';
 import "styles/Header.css";
 
@@ -11,14 +14,19 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "500px" }}>
+          <Button
+            text="Learn React"
+            color="black"
+            onClick="https://reactjs.org"
+          />
+          <Button
+            text="Show Alert"
+            color="white"
+            onClick={() => { alert("Navigate to an internal route") }}
+          />
+        </div>
       </header>
     </div>
   );
