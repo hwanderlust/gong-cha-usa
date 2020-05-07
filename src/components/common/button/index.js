@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import { isInternalPath } from "../../helpers";
+import { isInternalPath } from "../../../helpers";
 
-import "../../styles/Button.css";
-import { Color } from "../../styles";
+import "./Button.css";
+import { Color } from "../../../styles";
 
 function Button(props) {
 
@@ -20,7 +20,7 @@ function Button(props) {
         >
             <p
                 className="button-text"
-                style={props.color === "white" && { color: Color.black }}
+                style={props.color === "white" ? { color: Color.black } : undefined}
             >
                 {props.text}
             </p>
