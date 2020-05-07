@@ -4,8 +4,8 @@ import { Banner, Button } from "./components/common";
 import { Consumer, Provider } from "./contexts";
 import logo from './logo.svg';
 
-import './styles/App.css';
-import "./styles/Header.css";
+import 'styles/App.css';
+import "styles/Header.css";
 
 function App() {
   return (
