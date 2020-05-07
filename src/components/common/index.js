@@ -1,3 +1,4 @@
+import Banner from "./banner";
 import Button from "./button";
 
-export { Button }
+export { Banner, Button }
