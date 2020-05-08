@@ -1,12 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Overlay from "./Overlay";
 import "./Modal.css";
 
 function Modal(props) {
+  const { showModal, toggleModal, tapOutToDismiss = true } = props;
+
+  if (!showModal) return null;
+
   return (
     <>
-      <Overlay />
+      <Overlay onClick={tapOutToDismiss ? toggleModal : undefined} />
       <div className="modal__container">
         <div className="modal__contents">
           {props.children}
@@ -15,5 +20,12 @@ function Modal(props) {
     </>
   );
 }
+
+Modal.propTypes = {
+  showModal: PropTypes.bool.isRequired,
+  toggleModal: PropTypes.func.isRequired,
+  children: PropTypes.element,
+  tapOutToDismiss: PropTypes.bool,
+};
 
 export default Modal;

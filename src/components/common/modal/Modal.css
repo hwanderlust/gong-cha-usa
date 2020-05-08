@@ -1,18 +1,16 @@
 .modal__container {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .modal__contents {
+  position: absolute;
+  flex: 1;
   background-color: var(--white);
   padding: var(--spacing-regular) var(--spacing-medium);
-}
-
-.modal--hide {
-  display: none;
-}
-
-.modal--show {
-  display: block;
+  z-index: 1;
 }

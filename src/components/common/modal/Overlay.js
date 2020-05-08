@@ -1,10 +1,16 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import "./Overlay.css";
 
-function Overlay() {
+function Overlay(props) {
   return (
-    <div className="overlay__underlay"></div>
+    <div className="overlay" onClick={props.onClick}></div>
   )
+}
+
+Overlay.propTypes = {
+  onClick: PropTypes.func
 }
 
 export default Overlay;
