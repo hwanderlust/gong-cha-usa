@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from "prop-types";
 
-import { isInternalPath } from "../../helpers";
+import { isInternalPath } from "../../../helpers";
 
-import "../../styles/Button.css";
-import { Color } from "../../styles";
+import "./Button.css";
+import { Color } from "../../../styles";
 
 /**
  * Renders a standard Button varying the font color based on the button's bg color
