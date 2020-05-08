@@ -13,4 +13,5 @@
   background-color: var(--white);
   padding: var(--spacing-regular) var(--spacing-medium);
   z-index: 1;
+  border-radius: var(--border-modal);
 }
