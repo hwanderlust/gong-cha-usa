@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Banner, Button } from "./components/common";
-import { Consumer, Provider } from "./contexts";
+import { Banner, ButtonPair } from "components/common";
+import { Consumer, Provider } from "contexts";
 import logo from './logo.svg';
 
 import 'styles/App.css';
@@ -27,20 +27,18 @@ function App() {
             </>
           </Banner>
 
-          <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "500px", marginTop: "50px" }}>
-            <Button
-              text="Learn React"
-              color="black"
-              onClick="https://reactjs.org"
-            />
-            <Button
-              text="Show Alert"
-              color="red"
-              onClick={() => { alert("Navigate to an internal route") }}
-            />
-          </div>
+          <ButtonPair
+            backgroundColor="white"
+            primaryButton={{
+              text: "Learn React",
+              onClick: "https://reactjs.org"
+            }}
+            secondaryButton={{
+              text: "Click Secondary",
+              onClick: () => { alert("Navigate to an internal route") }
+            }}
+          />
         </header>
-
         <section>
           <Consumer>
             {dimensions => (

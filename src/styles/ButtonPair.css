@@ -1,0 +1,13 @@
+.button-pair__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-pair__container--horizontal {
+  width: 410px; /* 200px per button + 10px space between */
+}
+
+.button-pair__container--vertical {
+  flex-direction: column;
+  height: 110px; /* 50px per button + 10px space between */
+}
