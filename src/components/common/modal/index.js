@@ -24,7 +24,7 @@ function Modal(props) {
 Modal.propTypes = {
   showModal: PropTypes.bool.isRequired,
   toggleModal: PropTypes.func.isRequired,
-  children: PropTypes.element,
+  children: PropTypes.element.isRequired,
   tapOutToDismiss: PropTypes.bool,
 };
 
