@@ -10,6 +10,7 @@
   font-size: clamp(1rem, 1rem + 1vmin, var(--font-24));
   color: var(--black);
   text-align: left;
+  text-transform: capitalize;
 }
 
 .title__line {
