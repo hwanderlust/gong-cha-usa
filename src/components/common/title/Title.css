@@ -1,0 +1,22 @@
+.title__container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  padding: inherit;
+}
+
+.title__text {
+  font-family: "RockSalt-Regular";
+  font-size: clamp(1rem, 1rem + 1vmin, var(--font-24));
+  color: var(--black);
+  text-align: left;
+}
+
+.title__line {
+  width: max(75vw, 105%);
+  height: 1px;
+  background-color: var(--red);
+  position: relative;
+  bottom: 0.67em; /* the default margin on h1 */
+  right: 0.1em;
+}
