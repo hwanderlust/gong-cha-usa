@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Banner, Button } from "./components/common";
+import { Banner, Button, Title } from "./components/common";
 import { Consumer, Provider } from "./contexts";
 import logo from './logo.svg';
 
@@ -12,6 +12,7 @@ function App() {
     <Provider>
       <div className="App">
         <header className="App-header">
+          <Title text="gong cha insert title here" />
           <Banner>
             <>
               <img
