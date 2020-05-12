@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Banner, Button } from "./components/common";
-import { Consumer, Provider } from "./contexts";
+import FaqSection from 'components/FaqSection';
+import { Banner, Button, } from "./components/common";
+import { DimensionsContext, } from "./contexts";
 import logo from './logo.svg';
 
 import 'styles/App.css';
@@ -9,7 +10,7 @@ import "styles/Header.css";
 
 function App() {
   return (
-    <Provider>
+    <DimensionsContext.Provider>
       <div className="App">
         <header className="App-header">
           <Banner>
@@ -42,17 +43,20 @@ function App() {
         </header>
 
         <section>
-          <Consumer>
+          <DimensionsContext.Consumer>
             {dimensions => (
               <>
                 <p>width: {dimensions.width}</p>
                 <p>height: {dimensions.height}</p>
               </>
             )}
-          </Consumer>
+          </DimensionsContext.Consumer>
         </section>
+
+        <FaqSection />
+
       </div>
-    </Provider>
+    </DimensionsContext.Provider>
   );
 }
 
