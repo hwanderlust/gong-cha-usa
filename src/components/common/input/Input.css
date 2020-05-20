@@ -1,0 +1,19 @@
+.form__input {
+  flex: 1;
+  padding: var(--spacing-small) var(--spacing-regular);
+  text-align: center;
+}
+
+.form__input--borderless {
+  outline: none;
+  border: none;
+}
+
+.form__input--failed-border {
+  outline: none;
+  border: 1px solid var(--red);
+}
+
+.form__input--failed-borderless {
+  color: var(--red);
+}

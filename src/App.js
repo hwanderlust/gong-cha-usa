@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Banner, Button } from "./components/common";
+import { Banner, Button, Input } from "./components/common";
 import { Consumer, Provider } from "./contexts";
+import { validate } from "./helpers";
 import logo from './logo.svg';
 
 import 'styles/App.css';
 import "styles/Header.css";
 
 function App() {
+  const [inputValue, onChange] = useState("");
+
   return (
     <Provider>
       <div className="App">
@@ -40,6 +43,22 @@ function App() {
             />
           </div>
         </header>
+
+        <form style={{ display: "flex", justifyContent: "center" }}>
+          <div style={{ display: "flex", width: "90vmin" }}>
+            <label style={{ marginRight: "1rem", alignSelf: "center" }}>
+              Email Address
+          </label>
+            <Input
+              type="email"
+              placeholder="customerservice@gongcha.com"
+              value={inputValue}
+              isValid={validate("email", inputValue)}
+              borderStyle
+              onChange={onChange}
+            />
+          </div>
+        </form>
 
         <section>
           <Consumer>
