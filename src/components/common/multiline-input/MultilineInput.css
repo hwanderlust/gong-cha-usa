@@ -1,0 +1,16 @@
+.form__multiline-input {
+  resize: none;
+  display: flex;
+  flex: 1;
+  height: 5vmin;
+  padding: var(--spacing-regular);
+  font-family: "Roboto-Regular";
+  font-size: var(--font-12);
+  border-radius: var(--border-input);
+}
+
+.form__multiline-input:focus {
+  outline: none;
+  border: 2px solid black;
+  border-radius: var(--border-input);
+}

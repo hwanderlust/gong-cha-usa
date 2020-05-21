@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-import { Banner, Button } from "./components/common";
+import { Banner, Button, MultilineInput } from "./components/common";
 import { Consumer, Provider } from "./contexts";
+import { callWithEventTargetValue } from "./helpers";
 import logo from './logo.svg';
 
 import 'styles/App.css';
 import "styles/Header.css";
 
 function App() {
+  const [multilineValue, changeMultilineValue] = useState("");
+  const onMultilineChange = callWithEventTargetValue(changeMultilineValue);
+
   return (
     <Provider>
       <div className="App">
@@ -40,6 +44,16 @@ function App() {
             />
           </div>
         </header>
+
+        <section>
+          <form style={{ display: "flex", width: "50vmin", margin: "0 auto" }}>
+            <MultilineInput
+              placeholder="Enter message here"
+              value={multilineValue}
+              onChange={onMultilineChange}
+            />
+          </form>
+        </section>
 
         <section>
           <Consumer>
