@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-self: flex-start;
+    
+}
+
+.navigation{
+    display: flex;
+    align-self: flex-end;
+    width: 50vw;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}

@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Banner, Button } from "./components/common";
 import { Consumer, Provider } from "./contexts";
+import Header from './components/header/index.js'
 import logo from './logo.svg';
 
 import 'styles/App.css';
@@ -11,7 +12,9 @@ function App() {
   return (
     <Provider>
       <div className="App">
+      <Header/>
         <header className="App-header">
+         
           <Banner>
             <>
               <img
