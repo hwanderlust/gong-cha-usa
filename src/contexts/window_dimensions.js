@@ -1,9 +1,8 @@
 import React from "react";
 
-const dimensionContext = React.createContext();
-const Consumer = dimensionContext.Consumer;
+const Context = React.createContext();
 
-class Provider extends React.Component {
+class DimensionsProvider extends React.Component {
 
   constructor(props) {
     super(props);
@@ -35,11 +34,14 @@ class Provider extends React.Component {
 
   render() {
     return (
-      <dimensionContext.Provider value={this.state}>
+      <Context.Provider value={this.state}>
         {this.props.children}
-      </dimensionContext.Provider>
+      </Context.Provider>
     );
   }
 }
 
-export { Consumer, Provider }
+export const DimensionsContext = {
+  Provider: DimensionsProvider,
+  Consumer: Context.Consumer
+} 
